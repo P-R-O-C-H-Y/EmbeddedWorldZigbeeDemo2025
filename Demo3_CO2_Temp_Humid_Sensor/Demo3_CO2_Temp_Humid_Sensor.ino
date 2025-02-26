@@ -240,10 +240,11 @@ void meausureAndReport() {
   // Update CO2 value in CO2 sensor EP
   zbCO2Sensor.setCarbonDioxide(co2Concentration);
 
-  // Report temperature, humidity and CO2 values
-  zbTempSensor.report();
+  // Report temperature, humidity and CO2 values, a small delay may be needed to avoid interference with reporting data
+  zbTempSensor.reportTemperature();
+  delay(100);
+  zbTempSensor.reportHumidity();
+  delay(100);
   zbCO2Sensor.report();
-
-  // Add small delay to allow the data to be sent before going to sleep
-  delay(200);
+  delay(100);
 }

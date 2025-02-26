@@ -40,7 +40,7 @@
 #define OTA_UPGRADE_HW_VERSION              0x0101      // The hardware version, this can be used to differentiate between different hardware versions
 
 uint8_t button = BOOT_PIN;
-uint8_t sensor_pin = 4;
+uint8_t sensor_pin = 1;
 
 ZigbeeVibrationSensor zbVibrationSensor = ZigbeeVibrationSensor(VIBRATION_SENSOR_ENDPOINT_NUMBER);
 
